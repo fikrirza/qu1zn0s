@@ -1,0 +1,33 @@
+{
+    "window.zoomLevel": -1,
+    "[blade]": {
+        
+    },
+    
+    "editor.wordWrap": "on",
+    "emmet.triggerExpansionOnTab": true,
+
+    "blade.format.enable": true,
+
+    "workbench.colorCustomizations":{
+        "tab.activeBackground": "#282c34",
+        "activityBar.background": "#282c34",
+        "editorGroup.background": "#282c34",
+        "sideBar.background": "#282c34"
+    },
+    
+    "beautify.language": {
+        "js": {
+            "type": ["javascript", "json"],
+            "filename": [".jshintrc", ".jsbeautifyrc"]
+            // "ext": ["js", "json"]
+            // ^^ to set extensions to be beautified using the javascript beautifier
+        },
+        "css": ["css", "scss"],
+        "html": ["htm", "html"]
+        // ^^ providing just an array sets the VS Code file type
+    },
+
+    "auto-close-tag.SublimeText3Mode": true
+    
+}
