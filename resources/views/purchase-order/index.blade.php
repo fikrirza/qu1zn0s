@@ -54,8 +54,10 @@ window.setTimeout(function() {
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Name</th>
-                                <th>Address</th>
+                                <th>Date</th>
+                                <th>PO Number</th>
+                                <th>Supplier</th>
+                                <th>Expected Delivery</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>

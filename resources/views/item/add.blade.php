@@ -33,7 +33,7 @@
                             <label for="">Category</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8">
-                            <div class="form-group">
+                            <div class="form-group {{ $errors->has('item_category') ? 'error' : ''}}">
                                 <select name="item_category" class="form-control show-tick" data-live-search="true">
                                     <option>-- Choose --</option>
                                     @foreach($getItemCategory as $key)

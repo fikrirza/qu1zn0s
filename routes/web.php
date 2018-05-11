@@ -52,7 +52,7 @@ Route::post('items/edit', 'ItemController@update_items')->name('items.update');
 //----- Purchase Order Management -----//
 Route::get('purchase-order', 'PurchaseOrderController@index')->name('po.index');
 Route::get('purchase-order/add', 'PurchaseOrderController@add')->name('po.add');
-
+Route::post('purchase-order/add', 'PurchaseOrderController@store')->name('po.store');
 //----- Purchase Order Management -----//
 
 
