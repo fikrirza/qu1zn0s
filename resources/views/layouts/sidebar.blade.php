@@ -39,17 +39,17 @@
 						<span>Warehouse</span>
 					</a>
 				</li>
-				<li class="">
+				<li class="{{ Route::is('itemCategory*') ? 'active' : '' }}{{ Route::is('items*') ? 'active' : '' }}">
 					<a href="javascript:void(0);" class="menu-toggle">
 						<i class="material-icons">inbox</i>
 						<span>Item</span>
 					</a>
 					<ul class="ml-menu">
-						<li class="">
-							<a href="">Item List</a>
+						<li class="{{ Route::is('items*') ? 'active' : '' }}">
+							<a href="{{ route('items.index') }}">Item List</a>
 						</li>
-						<li class="">
-							<a href="">Item Category</a>
+						<li class="{{ Route::is('itemCategory*') ? 'active' : '' }}">
+							<a href="{{ route('itemCategory.index') }}">Item Category</a>
 						</li>
 					</ul>
 				</li>
@@ -59,7 +59,14 @@
 						<span>Supplier</span>
 					</a>
 				</li>
-				<li class="header">TRANSACTION</li>
+				<li class="header">PURCHASE ORDER</li>
+				<li class="{{ Route::is('po.*') ? 'active' : '' }}">
+					<a href="{{ route('po.index') }}">
+						<i class="material-icons">receipt</i>
+						<span>Purchase Order</span>
+					</a>
+				</li>
+
 				
 				<li class="header">SETTING</li>
 				@if (Auth::user()->can('management-user') || Auth::user()->can('read-user'))

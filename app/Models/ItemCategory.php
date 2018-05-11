@@ -10,5 +10,8 @@ class ItemCategory extends Model
 
     protected $fillable = ['category_name'];
 
+    public function items(){
     
+        return $this->hasMany('App\Models\Item');
+    }
 }

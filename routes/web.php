@@ -34,6 +34,28 @@ Route::get('supplier/edit/{slug}', 'SupplierController@edit')->name('supplier.ed
 Route::post('supplier/edit', 'SupplierController@update')->name('supplier.update');
 //----- Supplier Management -----//
 
+//----- Item Category Management -----//
+Route::get('item-category', 'ItemController@index_itemCategory')->name('itemCategory.index');
+Route::post('item-category/add', 'ItemController@store_itemCategory')->name('itemCategory.store');
+Route::get('item-category/edit/{category_slug}', 'ItemController@edit_itemCategory')->name('itemCategory.edit');
+Route::post('item-category/edit', 'ItemController@update_itemCategory')->name('itemCategory.update');
+//----- Item Category Management -----//
+
+//----- Item Management -----//
+Route::get('items', 'ItemController@index_items')->name('items.index');
+Route::get('items/add', 'ItemController@add_items')->name('items.add');
+Route::post('items/add', 'ItemController@store_items')->name('items.store');
+Route::get('items/edit/{id}', 'ItemController@edit_items')->name('items.edit');
+Route::post('items/edit', 'ItemController@update_items')->name('items.update');
+//----- Item Management -----//
+
+//----- Purchase Order Management -----//
+Route::get('purchase-order', 'PurchaseOrderController@index')->name('po.index');
+Route::get('purchase-order/add', 'PurchaseOrderController@add')->name('po.add');
+
+//----- Purchase Order Management -----//
+
+
 
 //----- Account Management -----//
 Route::get('account', 'AccountController@index')->name('user.index')->middleware('can:read-user');

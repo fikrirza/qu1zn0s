@@ -4,8 +4,12 @@
 <title>Warehouse</title>
 @endsection
 
-@section('content')
+@section('headscript')
+<link href="{{ asset('plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}" rel="stylesheet">
+@endsection
 
+
+@section('content')
 @if(Session::has('berhasil'))
 <script>
 window.setTimeout(function() {
@@ -46,7 +50,7 @@ window.setTimeout(function() {
             </div>
             <div class="body">
                 <div class="table-responsive">
-                    <table class="table table-hover table-bordered basic-example responsive" style="width:100%">
+                    <table class="table table-hover table-bordered basic-example dataTable" style="width:100%">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -115,4 +119,17 @@ window.setTimeout(function() {
     </div>
 </div>
 
+@endsection
+
+@section('bottomscript')
+<script src="{{ asset('plugins/jquery-datatable/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js') }}"></script>
+
+<script>
+    $(function () {
+        $('.basic-example').DataTable({
+            responsive: true
+        });
+    });
+</script>
 @endsection
