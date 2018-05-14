@@ -59,11 +59,40 @@
 						<span>Supplier</span>
 					</a>
 				</li>
-				<li class="header">PURCHASE ORDER</li>
+				<li class="header">TRANSACTIONS</li>
+				<li class="{{ Route::is('stocks.*') ? 'active' : '' }}">
+					<a href="javascript:void(0);" class="menu-toggle">
+						<i class="material-icons">format_list_bulleted</i>
+						<span>Inventory</span>
+					</a>
+					<ul class="ml-menu">
+						<li class="{{ Route::is('stocks.*') ? 'active' : '' }}">
+							<a href="{{ route('stocks.index') }}">Stock Summary</a>
+						</li>
+						<li class="">
+							<a href="">Scan In</a>
+						</li>
+						<li class="">
+							<a href="">Scan Out</a>
+						</li>
+					</ul>
+				</li>
 				<li class="{{ Route::is('po.*') ? 'active' : '' }}">
 					<a href="{{ route('po.index') }}">
 						<i class="material-icons">receipt</i>
 						<span>Purchase Order</span>
+					</a>
+				</li>
+				<li class="{{ Route::is('orders.*') ? 'active' : '' }}">
+					<a href="{{ route('orders.index') }}">
+						<i class="material-icons">shopping_cart</i>
+						<span>Orders</span>
+					</a>
+				</li>
+				<li class="{{ Route::is('packages.*') ? 'active' : '' }}">
+					<a href="{{ route('packages.index') }}">
+						<i class="material-icons">archive</i>
+						<span>Packages</span>
 					</a>
 				</li>
 

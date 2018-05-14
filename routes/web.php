@@ -55,6 +55,22 @@ Route::get('purchase-order/add', 'PurchaseOrderController@add')->name('po.add');
 Route::post('purchase-order/add', 'PurchaseOrderController@store')->name('po.store');
 //----- Purchase Order Management -----//
 
+//----- Order Management -----//
+Route::get('orders', 'OrdersController@index')->name('orders.index');
+Route::get('orders/add', 'OrdersController@add')->name('orders.add');
+Route::get('orders/detail/{order_no}', 'OrdersController@detail')->name('orders.detail');
+//----- Order Management -----//
+
+//----- Package Management -----//
+Route::get('packages', 'PackagesController@index')->name('packages.index');
+Route::get('packages/add', 'PackagesController@add')->name('packages.add');
+//----- Package Management -----//
+
+//----- Stocks Management -----//
+Route::get('stock-summary', 'StocksController@index')->name('stocks.index');
+Route::get('stock-summary/available', 'StocksController@available')->name('stocks.available');
+Route::get('stock-summary/incoming', 'StocksController@incoming')->name('stocks.incoming');
+//----- Stocks Management -----//
 
 
 //----- Account Management -----//

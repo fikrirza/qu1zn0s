@@ -228,8 +228,8 @@
                             </tbody>
                         </table>
                         <div class="col-md-6">
-                            <label class="btn btn-sm btn-flat bg-green" onclick="addIngredient('orders')">Add Ingredient</label>&nbsp;
-                            <label class="btn btn-sm btn-flat bg-red" onclick="delIngredient('orders')">Remove Ingredient</label>
+                            <label class="btn btn-sm btn-flat bg-green" onclick="addIngredient('orders')">Add Item</label>&nbsp;
+                            <label class="btn btn-sm btn-flat bg-red" onclick="delIngredient('orders')">Remove Item</label>
                         </div>
                     </div>
 
