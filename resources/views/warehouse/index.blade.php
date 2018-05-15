@@ -31,7 +31,9 @@ window.setTimeout(function() {
 
 <div class="row clear-fix">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        @can('create-warehouse')
         <a href="{{ route('warehouse.add') }}" class="btn btn-primary waves-effect"><i class="material-icons">add</i><span>Add Warehouse</span></a>
+        @endcan
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 align-right">
         <ol class="breadcrumb">
@@ -75,7 +77,11 @@ window.setTimeout(function() {
                                         <a href="" class="label label-danger waves-effect active" data-value="{{ $key->id }}" data-toggle="modal" data-target="#modal-active">Not Active</a>
                                     @endif
                                 </td>
-                                <td><a href="{{ route('warehouse.edit', ['slug' => $key->slug ]) }}" class="btn btn-warning btn-md waves-effect">Update</a></td>
+                                <td>
+                                    @can('update-warehouse')
+                                    <a href="{{ route('warehouse.edit', ['slug' => $key->slug ]) }}" class="btn btn-warning btn-md waves-effect">Update</a>
+                                    @endcan
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

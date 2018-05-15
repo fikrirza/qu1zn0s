@@ -30,7 +30,9 @@ window.setTimeout(function() {
 
 <div class="row clear-fix">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        @can('create-user')
         <a href="#" class="btn btn-primary waves-effect"><i class="material-icons">add</i><span>Add Account</span></a>
+        @endcan
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 align-right">
         <ol class="breadcrumb">
@@ -59,7 +61,9 @@ window.setTimeout(function() {
                                 <th>Avatar</th>
                                 <th>Role</th>
                                 <th>Status</th>
+                                @can('update-user')
                                 <th>Action</th>
+                                @endcan
                             </tr>
                         </thead>
                         <tbody>
@@ -83,7 +87,9 @@ window.setTimeout(function() {
                                         <a href="" class="label label-danger waves-effect active" data-value="{{ $user->id }}" data-toggle="modal" data-target="#modal-active">Not Active</a>
                                     @endif
                                 </td>
+                                @can('update-user')
                                 <td><a href="#" class="btn btn-warning btn-xs waves-effect">Update</a></td>
+                                @endcan
                             </tr>
                             @endforeach
                         </tbody>

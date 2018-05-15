@@ -32,7 +32,9 @@ window.setTimeout(function() {
 
 <div class="row clear-fix">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        @can('create-supplier')
         <a href="{{ route('supplier.add') }}" class="btn btn-primary waves-effect"><i class="material-icons">add</i><span>Add Supplier</span></a>
+        @endcan
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 align-right">
         <ol class="breadcrumb">
@@ -60,7 +62,9 @@ window.setTimeout(function() {
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Address</th>
+                                @can('update-supplier')
                                 <th>Action</th>
+                                @endcan
                             </tr>
                         </thead>
                         <tbody>
@@ -75,7 +79,9 @@ window.setTimeout(function() {
                                 <td>{{ $key->supplier_email }}</td>
                                 <td>{{ $key->supplier_phone }}</td>
                                 <td>{{ $key->supplier_address }}</td>
+                                @can('update-supplier')
                                 <td><a href="{{ route('supplier.edit', ['supplier_slug' => $key->supplier_slug ]) }}" class="btn btn-warning btn-md waves-effect">Update</a></td>
+                                @endcan
                             </tr>
                             @endforeach
                         </tbody>

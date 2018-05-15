@@ -73,7 +73,7 @@ window.setTimeout(function() {
                                                     <option value="">Filter Item Category</option>
                                                     <option value="">Sauces</option>
                                                     <option value="">Box</option>
-                                                    <option value="">BreadS</option>
+                                                    <option value="">Breads</option>
                                                     <option value="">Vegetables</option>
                                                     <option value="">Fruits</option>
                                                 </select>

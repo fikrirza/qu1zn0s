@@ -31,7 +31,9 @@ window.setTimeout(function() {
 
 <div class="row clear-fix">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        @can('create-po')
         <a href="{{ route('po.add') }}" class="btn btn-primary waves-effect"><i class="material-icons">add</i><span>Add Purchase Order</span></a>
+        @endcan
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 align-right">
         <ol class="breadcrumb">

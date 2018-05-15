@@ -52,7 +52,9 @@ window.setTimeout(function() {
                             <tr>
                                 <th>No</th>
                                 <th>Name</th>
+                                @can('update-itemCategory')
                                 <th>Action</th>
+                                @endcan
                             </tr>
                         </thead>
                         <tbody>
@@ -63,7 +65,9 @@ window.setTimeout(function() {
                             <tr>
                                 <td>{{ $no++ }}</td>
                                 <td>{{ $key->category_name }}</td>
+                                @can('update-itemCategory')
                                 <td><a href="{{ route('itemCategory.edit', ['category_slug' => $key->category_slug ]) }}" class="btn btn-warning btn-md waves-effect">Update</a></td>
+                                @endcan                                
                             </tr>
                             @endforeach
                         </tbody>
@@ -73,6 +77,7 @@ window.setTimeout(function() {
         </div>
     </div>
     
+    @can('create-itemCategory')
     @if($addForm == true)
     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
         <div class="card">
@@ -141,6 +146,7 @@ window.setTimeout(function() {
         </div>
     </div>
     @endif
+    @endcan
 </div>
 
 

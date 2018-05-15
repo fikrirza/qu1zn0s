@@ -31,7 +31,9 @@ window.setTimeout(function() {
 
 <div class="row clear-fix">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        @can('create-item')
         <a href="{{ route('items.add') }}" class="btn btn-primary waves-effect"><i class="material-icons">add</i><span>Add Item</span></a>
+        @endcan
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 align-right">
         <ol class="breadcrumb">
@@ -60,7 +62,9 @@ window.setTimeout(function() {
                                 <th>Unit</th>
                                 <th>Description</th>
                                 <th>Min Stock</th>
+                                @can('update-item')
                                 <th>Action</th>
+                                @endcan
                             </tr>
                         </thead>
                         <tbody>
@@ -76,7 +80,9 @@ window.setTimeout(function() {
                                 <td>{{ $key->item_unit }}</td>
                                 <td>{{ $key->item_description }}</td>
                                 <td>{{ $key->item_min_stock }}</td>
+                                @can('update-item')
                                 <td><a href="{{ route('items.edit', ['id' => $key->id ]) }}" class="btn btn-warning btn-md waves-effect">Update</a></td>
+                                @endcan
                             </tr>
                             @endforeach
                         </tbody>

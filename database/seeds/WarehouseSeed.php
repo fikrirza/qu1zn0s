@@ -13,7 +13,7 @@ class WarehouseSeed extends Seeder
     {
         DB::table('st_warehouse')
           ->insert(array(
-                    array('name'=>'HQ', 'address'=> 'Jl. Palmerah Barat', 'flag_status' => ''),
+                    array('name'=>'Head Office', 'address'=> 'Jl. Palmerah Barat', 'slug'=>'head-office', 'flag_status' => ''),
                 ));
     }
 }
